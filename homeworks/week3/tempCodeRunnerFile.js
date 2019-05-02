@@ -10,4 +10,5 @@ function stars(n) {
   return starss;
 }
 
+console.log(stars(6));
 module.exports = stars;
