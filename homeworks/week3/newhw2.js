@@ -14,6 +14,8 @@ function alphaSwap(str) {
   return newStr;
 }
 
-const outcome = alphaSwap('lo');
-console.log(outcome);
-module.exports = alphaSwap;
+console.log(alphaSwap('nick'));
+console.log(alphaSwap('Nick'));
+console.log(alphaSwap(',hEllO122'));
+console.log(alphaSwap('abcd'));
+console.log(alphaSwap('A1Lkk2'));

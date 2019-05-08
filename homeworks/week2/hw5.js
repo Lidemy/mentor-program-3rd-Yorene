@@ -20,5 +20,8 @@ function repeat(str, times) {
 
 console.log(join(['a', 1, 'b', 2, 'c', 3], ','));
 console.log(repeat('yoyo', 2));
-
+console.log(join([], ','));
+console.log(join([''], ','));
+console.log(join(['a', 1, 'b', 2, 'c', 3]));
+console.log(join(['1'], ','));
 // 以陣列為主，即作業說明上的為主。

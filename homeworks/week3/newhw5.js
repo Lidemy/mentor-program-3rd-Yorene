@@ -36,7 +36,9 @@ function add(a, b) {
   return c;
 }
 
-
-console.log(add(8, 4));
-
-module.exports = add;
+// console.log(add('10999', '99'));
+// console.log(add('65', '87'));
+// console.log(add('123', '456'));
+// console.log(add('123', '45'));
+console.log(add('12312383813881381381', '129018313819319831'));
+// console.log(add('111111111111111111111111111111', '222222222222222222222222222222'));

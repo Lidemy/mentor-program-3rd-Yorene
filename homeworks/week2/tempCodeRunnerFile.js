@@ -1,24 +1,15 @@
-function join(array, concatStr) {
-  let newSStr = '';
-  let index = 0;
-  for (index = 0; index < (array.length - 1); index += 1) {
-    newSStr += array[index] + concatStr;
+function capitalize(str) {
+  const firstLetter = str[0];
+  const firstChar = str.charCodeAt(0);
+  let newLetter = '';
+  if (str[0] >= 'a' && str[0] <= 'z') {
+    newLetter = String.fromCharCode((firstChar - 32));
+    const newStr = str.replace(firstLetter, newLetter);
+    return newStr;
   }
-  // console.log(array[(array.length - 1)]);
-  newSStr += array[(array.length - 1)];
-  return newSStr;
+  return str;
 }
 
-function repeat(str, times) {
-  let newStr = '';
-  let i = 0;
-  for (i = 0; i < times; i += 1) {
-    newStr += str;
-  }
-  return newStr;
-}
-
-console.log(join(['a', 1, 'b', 2, 'c', 3], ','));
-console.log(repeat('yoyo', 2));
-
-// 以陣列為主，即作業說明上的為主。
+const outcome = capitalize('nick');
+console.log(outcome);
+console.log(capitalize(',hello'));
