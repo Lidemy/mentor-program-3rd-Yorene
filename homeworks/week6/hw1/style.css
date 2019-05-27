@@ -1,0 +1,102 @@
+* {
+  margin: 0px;
+  padding: 0px;
+
+}
+
+@media screen and (min-width: 768px) {
+  .bottom {
+    display: flex;
+  }
+}
+
+/* 第一大區塊 */
+
+.navbar {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  background: rgb(32, 40, 52);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+/* 這其實沒有用，還是應該要分開設兩個群組比較好 */
+.navbar__head {
+  color: white;
+}
+
+/* 這個才有用，我猜因為權重？ */
+.navbar li:nth-child(1) {
+  color:white;
+}
+.navbar li {
+  padding: 10px;
+  color: rgb(163, 163, 163)
+} 
+
+.navbar li:hover {
+  color: white;
+}
+/* 第二大區塊 */
+
+.top {
+  padding: 50px 20px 30px;
+  background: rgb(236, 250, 254);
+}
+
+.top__body {
+  margin: auto;
+  max-width: 1000px;
+  min-width: 300px;
+}
+
+/* .top__title 其實沒有用到，好像不需要 */
+
+.top__text {
+  padding: 15px 0px 10px 0px;
+}
+
+
+.top__button {
+  width: 180px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: rgb(55, 127, 234);
+  color: white;
+}
+
+/* 第三大區塊 */
+
+.bottom {
+  padding: 30px 20px;
+  margin: auto;
+  max-width: 1000px;
+}
+
+article {
+  margin: 20px 0px;
+}
+
+
+.bottom p {
+  padding: 15px 5px 10px 0px;
+}
+
+.bottom__button {
+  width: 120px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 5px;
+  background: rgb(147, 147, 147);
+  color: white;
+}
+
+/* 第四大區塊 */
+
+footer {
+  padding: 20px 20px;
+  margin: auto;
+  max-width: 1000px;
+}

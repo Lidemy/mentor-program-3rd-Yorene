@@ -1,0 +1,150 @@
+* {
+  margin: 0px;
+  padding: 0px;
+
+}
+
+@media screen and (min-width: 768px) {
+  .preview {
+    display: flex;
+    justify-content: center;
+  }
+
+  .preview__part {
+    width: 350px;
+  }
+}
+
+/* 1 */
+nav {
+  max-width: 1170px;
+  position: relative;
+  margin: auto;
+}
+
+
+.nav__logo {
+  width: 30px;
+  height: 30px;
+  background: black;
+  margin: 10px 20px;
+}
+
+.nav__list {
+  position: absolute;
+  display: flex;
+  top: 0px;
+  right: 0px;
+}
+
+.nav__setting {
+  width: 30px;
+  height: 30px;
+  background: #aaaaaa;
+  margin: 10px 10px;
+  border-radius: 15px;
+}
+
+.nav__upgrade {
+  width: 80px;
+  height: 30px;
+  margin: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+  display: none;
+}
+.nav__avatar{
+  width: 30px;
+  height: 30px;
+  background: #bbaaaa;
+  margin: 10px 20px 10px 0px;
+  border-radius: 15px;
+}
+
+/* 2 */
+
+article {
+  padding: 30px 100px;
+  max-width: 768px;
+  margin: auto;
+}
+
+.article__title {
+  padding: 20px 0px;
+}
+
+.article__text {
+  line-height: 1.8em;
+  white-space: pre-line;
+}
+
+/* 3 */
+.preview__part {
+  margin: 20px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.preview__body {
+  padding: 10px;
+  position: relative;
+}
+
+.preview__image {
+  width: 100%;
+  height: 100px;
+  background: #bbaaaa;
+}
+
+.preview__title {
+  padding: 20px 0px;
+}
+
+.preview__author {
+  display: flex;
+  /* line-height: 1.8em; */
+}
+
+.preview__author__avatar {
+  width: 50px;
+  height: 50px;
+  margin: 0px 10px 0px 0px;
+  background: #ffaaaa;
+  border-radius: 25px;
+}
+
+.preview__clap {
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+/* 4 */
+.clap {
+  width: 30px;
+  height: 30px;
+  display: none;
+  border-radius: 15px;
+  border: black;
+}
+
+@media screen and (min-width: 1170px) {
+  .clap {
+    background-color: #aaaaff;
+    display: block;
+    position: fixed;
+    left: 30px;
+    top: 200px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav__upgrade {
+    display: block;
+  }
+}
+
