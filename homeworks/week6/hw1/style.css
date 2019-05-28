@@ -1,0 +1,112 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 微軟正黑體;
+}
+
+@media screen and (min-width: 768px) {
+  .bottom {
+    display: flex;
+  }
+}
+
+p {
+  line-height: 1.8em;
+}
+
+/* 第一大區塊 */
+.navbar {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  background: rgb(32, 40, 52);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.navbar li:nth-child(1) {
+  color:white;
+}
+
+.navbar li {
+  padding: 10px;
+  color: rgb(163, 163, 163);
+} 
+
+.navbar li:hover {
+  color: white;
+}
+
+/* 第二大區塊 */
+.top {
+  padding: 50px;
+  background: rgb(236, 250, 254);
+}
+
+.top__body {
+  margin: auto;
+  max-width: 1000px;
+  min-width: 300px;
+}
+
+.top__title {
+  font-size: 100px;
+  font-weight: 400;
+  padding: 20px 0px;
+}
+
+.top__text {
+  padding: 15px 0px 10px 0px;
+}
+
+.top__button {
+  width: 200px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: rgb(55, 127, 234);
+  color: white;
+  font-size: 20px;
+}
+
+/* 第三大區塊 */
+.body {
+  padding: 50px;
+}
+
+.bottom {
+  padding: 0px 0px 50px;
+  margin: auto;
+  max-width: 1000px;
+}
+
+article {
+  padding: 0px 15px 50px 0px;
+  width: 500px;
+  position: relative;
+}
+
+.bottom h2 {
+  font-size: 40px;
+  padding: 10px 0px;
+  font-weight: 400;
+}
+
+.bottom__button {
+  width: 120px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 5px;
+  background: rgb(147, 147, 147);
+  color: white;
+  position: absolute;
+  bottom: 0px;
+
+}
+
+/* 第四大區塊 */
+footer {
+  padding: 20px 20px;
+  margin: auto;
+  max-width: 1000px;
+}
