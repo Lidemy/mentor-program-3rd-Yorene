@@ -3,6 +3,7 @@ const changeTime = Math.floor(Math.random() * 400 + 100);
 const rColor = Math.floor(Math.random() * 225);
 const gColor = Math.floor(Math.random() * 225);
 const bColor = Math.floor(Math.random() * 225);
+
 function changeColor() {
   document.querySelector('body').style.backgroundColor = `rgb(${rColor}, ${gColor}, ${bColor})`;
 }
