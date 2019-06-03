@@ -1,0 +1,81 @@
+* {
+  margin: 0px;
+}
+
+body {
+  background-color: #aaaaff;
+  position: relative;
+  border: 1px solid;
+}
+
+.background-img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  background-size: cover;
+}
+
+form {
+  margin: 100px 20px;
+  border-top: 10px solid #aaffaa;
+  padding: 50px;
+  background-color: white;
+}
+
+.title {
+  padding: 30px 0px;
+}
+
+.info {
+  margin: 15px 0px;
+}
+
+.question {
+  padding: 50px 0px;
+}
+
+form div input:hover {
+  border-bottom: 2px solid red;
+  transition: all 1s;
+}
+
+form div input {
+  border-bottom: 1px solid rgb(224, 224, 234);
+}
+
+
+.options {
+  display: flex;
+  align-items: center;
+}
+
+label {
+  padding: 20px 0px 20px 20px;
+}
+
+.submit {
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  margin: 20px 0px;
+  background-color: rgb(48, 116, 224);
+  font-size: 20px;
+  color: white;
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+}
+
+/* JavaScript */
+.double__checked {
+  margin: 5px;
+  padding: 10px;
+  background-color: rgb(249, 232, 230);
+}
+
+.must {
+  padding: 10px 0px;
+  color: rgb(201, 63, 49);
+}
