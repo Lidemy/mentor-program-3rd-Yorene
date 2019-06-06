@@ -7,6 +7,7 @@ apllicationForm.addEventListener('submit', (e) => {
     // bgc
     parent.classList.add('double__checked');
     // text
+
     const unsuccess = document.createElement('div');
     unsuccess.classList.add('unsuccess');
     unsuccess.classList.add('must');
@@ -39,6 +40,7 @@ apllicationForm.addEventListener('submit', (e) => {
     unqualified(emailelement.closest('div'), '請輸入有效的電子郵件地址');
   }
 
+  // class
   const class1 = document.querySelector('#class1');
   const class2 = document.querySelector('#class2');
   if (class1.checked || class2.checked) {
