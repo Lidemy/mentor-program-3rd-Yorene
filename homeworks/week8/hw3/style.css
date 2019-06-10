@@ -1,0 +1,49 @@
+body {
+  background-image: url('http://www.lol-wallpapers.com/wp-content/uploads/2018/10/KDA-Akali-Splash-Art-HD-Wallpaper-Background-Official-Art-Artwork-League-of-Legends-lol-1.jpg');
+  background-position: top center;
+  background-size: cover;
+}
+
+section {
+  /* margin: auto; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* JavaScript */
+.stream {
+  width: 640px;
+  margin: 20px;
+  /* display: flex; */
+  /* padding: 0px; */
+}
+
+.stream__preview_large {
+  vertical-align: top;
+}
+
+.stream__bottom {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin: 15px;
+}
+
+.stream__info {
+  padding: 5px 15px;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 20px;
+}
+
+.status, .name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
