@@ -1,0 +1,51 @@
+body {
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  border-bottom: 3px solid #201070;
+  /* margin: 30px; */
+}
+
+input {
+  width: 50%;
+}
+
+/* JavaScript */
+p {
+  padding: 0px 30px;
+  /* 子元素 */
+  line-height: 90px;
+  margin: 0px;
+}
+
+
+.add_message, .lastest {
+  width: 120px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #5030b0;
+  color: #dfcfff;
+}
+
+.item {
+  /* 父元素 */
+  height: 90px;
+  width: 800px;
+  /* display: flex; */
+  margin: 10px 0px;
+}
+ 
+.item div {
+  vertical-align: top;
+  height: 100%;
+  display: inline-block;
+  line-height: 90px;
+} 
+
+.avatar {
+  width: 60px;
+  height: auto;
+  border-radius: 30px;  
+}
