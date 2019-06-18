@@ -1,0 +1,28 @@
+form div {
+  text-align: left;
+  padding: 10px;
+}
+
+.container {
+  margin: auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.comments {
+  padding: 20px;
+}
+
+.comment {
+  border: 1px solid gray;
+  padding: 20px;
+  text-align: left;
+}
+
+.comment ~ .comment {
+  margin-top: 50px;
+}
+
+.comment__content {
+  white-space: pre-line;
+}
