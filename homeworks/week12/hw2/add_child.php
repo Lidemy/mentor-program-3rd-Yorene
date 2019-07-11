@@ -13,12 +13,12 @@ $commentId = $_GET['id'];
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Add Comments</title>
+  <title>Reply</title>
   <link rel="stylesheet" type="text/css" href="./style.css?v=1.1">
 </head>
 <body>
   <div class='container'>
-    <h1>Add Comments</h1>
+    <h1>Reply/Add Comments</h1>
     <a href="./logout.php">Logout</a>
     <a href="./index.php">Comments Board</a>
 

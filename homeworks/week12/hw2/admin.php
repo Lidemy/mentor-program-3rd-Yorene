@@ -46,10 +46,13 @@ if (!isset($_COOKIE['member_id'])) {
       $resultCheck = $result->num_rows;
       if ($result && $resultCheck > 0) {
         while ($row = $result->fetch_assoc()) {
+          $content = $row['content'];
+          $textContent = htmlspecialchars($content, ENT_QUOTES, 'utf-8');          
+
           echo "<div class='comment'>";
           echo  "<h2>" . $row['nickname'] . "</h2>";
           echo  "<h3 class='comment__created_time'>" . $row['created_at'] . "</h3>";
-          echo  "<p class='comment__content'>" . $row['content'] . "</p>";
+          echo  "<p class='comment__content'>" . $textContent . "</p>";
           // 使用 a 連結外加網址的參數！
           echo  " <a href='update.php?id=$row[id]'>Update/Edit</a>";
           echo  " <a href='delete.php?id=$row[id]'>Delete/Remove</a>";

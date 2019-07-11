@@ -23,15 +23,22 @@ if (empty($content)) {
   die("Please check!");
 }
 
-$sql = "INSERT INTO yorene_comments_children(content, user_id, comment_id) VALUES ('$textContent', '$userId', '$commentId')";
-// Because no user_id, Error Field 'user_id' doesn't have a default value
-$result = $conn->query($sql);
-// $resultCheck = $result->num_rows;
+// week9
+// $sql = "INSERT INTO yorene_comments_children(content, user_id, comment_id) VALUES ('$textContent', '$userId', '$commentId')";
+// // Because no user_id, Error Field 'user_id' doesn't have a default value
+// $result = $conn->query($sql);
+// // $resultCheck = $result->num_rows;
 
-if ($result) {
-  // 之後可能要改成 page.php
-  header("Location: ./index.php");
-  // echo "success!";
-} else {
-  echo "Failed, " . $conn->error . "<br>";
-}
+// if ($result) {
+//   // 之後可能要改成 page.php
+//   header("Location: ./index.php");
+//   // echo "success!";
+// } else {
+//   echo "Failed, " . $conn->error . "<br>";
+// }
+
+$sql = "INSERT INTO yorene_comments_children(content, user_id, comment_id) VALUES (?, ?, ?)";
+$statement = $conn->prepare($sql);
+$statement->bind_param("sii", $textContent, $userId, $commentId);
+$statement->execute();
+header("Location: ./index.php");

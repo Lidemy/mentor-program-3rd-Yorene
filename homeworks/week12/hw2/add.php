@@ -42,6 +42,8 @@ if (!isset($_COOKIE['member_id'])) {
           $cRow = $certificate_result->fetch_assoc();
           $id = $cRow['user_id'];
         }
+        // 可能要改？SQL injection？
+
 
         // Week9
         $sql = "SELECT nickname FROM yorene_users WHERE id = '$id'";
@@ -54,7 +56,7 @@ if (!isset($_COOKIE['member_id'])) {
           echo "<div>Nickname: $nickname </div>";
           echo "<div>Comment: <textarea name='content' cols='80' rows='10'></textarea></div>";
           // use input to send but use hidden to hide
-          echo "<div><input type='hidden' name='user_id' value='$id'></div>";
+          // echo "<div><input type='hidden' name='user_id' value='$id'></div>";
         }
       }
         // echo "<div>Nickname: <input type='text' name='nickname' value='$nickname'></div>";

@@ -2,6 +2,7 @@
 require_once('conn.php');
 
 $username = $_POST["username"];
+// 那這個要改嗎？
 $password = $_POST["password"];
 
 if (empty($username) || empty($password)) {
@@ -10,20 +11,24 @@ if (empty($username) || empty($password)) {
 
 // $sql = "SELECT id, password FROM yorene_users WHERE username =  '$username' ";
 // $result = $conn->query($sql);
-
+// week12
 $stmt = $conn->prepare("SELECT id, password FROM yorene_users WHERE username = ? ");
 $stmt->bind_param("s", $username);
 $stmt->execute();
 $result = $stmt->get_result();
 
 $resultCheck = $result->num_rows;
-if (!$result) {
-	trigger_error('Invalid query: ' . $conn->error);
-}
+// if (!$result) {
+// 	trigger_error('Invalid query: ' . $conn->error);
+// }
 
 if ($result && $resultCheck > 0) {
   $row = $result->fetch_assoc();
-  // echo $row['password'];
+  // $password = $row['password'];
+  // echo $password . "<br>";
+  // $hashPassword = password_hash("$password", PASSWORD_BCRYPT);
+  // echo $hashPassword;
+
 
   // 若正確: Week9: $password === $row['password']
   if (password_verify($password, $row['password'])) {

@@ -44,10 +44,13 @@ require_once('conn.php');
       $resultCheck = $result->num_rows;
       if ($result && $resultCheck > 0) {
         while ($row = $result->fetch_assoc()) {
+          $content = $row['content'];
+          $textContent = htmlspecialchars($content, ENT_QUOTES, 'utf-8');
+
           echo "<div class='comment'>";
           echo  "<h2>" . $row['nickname'] . "</h2>";
           echo  "<h3 class='comment__created_time'>" . $row['created_at'] . "</h3>";
-          echo  "<p class='comment__content'>" . $row['content'] . "</p>";
+          echo  "<p class='comment__content'>" . $textContent . "</p>";
           echo "</div>";
         }
       }
