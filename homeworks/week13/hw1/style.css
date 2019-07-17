@@ -1,0 +1,84 @@
+.container {
+  max-width: 960px;
+  margin: auto;
+  text-align: center;
+}
+
+.rulers, .row {
+  display: flex;
+  margin: 20px;
+}
+
+.ruler {
+  width: 80px;
+  border-left: 1px solid #aaaaaa;
+  border-right: 1px solid #aaaaaa;
+}
+
+.block {
+  border: 1px solid #ffaaaa;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.col-1 {
+  width: 80px;
+}
+
+.col-2 {
+  width: 160px;
+}
+
+.col-3 {
+  width: 240px;
+}
+
+.col-4 {
+  width: 320px;
+}
+
+.col-5 {
+  width: 400px;
+}
+
+.col-6 {
+  width: 480px;
+}
+
+.col-7 {
+  width: 560px;
+}
+
+.col-8 {
+  width: 640px;
+}
+
+.col-9 {
+  width: 720px;
+}
+
+.col-10 {
+  width: 800px;
+}
+
+.col-11 {
+  width: 880px;
+}
+
+.col-12 {
+  width: 960px;
+}
+
+@media screen and (max-width: 720px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .row {
+    display: block;
+  }
+
+  .block {
+    width: 100%;
+  }
+}
