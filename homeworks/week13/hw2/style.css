@@ -1,0 +1,7 @@
+.done {
+  background-color: black;
+  color: darkgray;
+  /* same as HTML tag <del> or <s> */
+  text-decoration:line-through;
+  order: 3;
+}
