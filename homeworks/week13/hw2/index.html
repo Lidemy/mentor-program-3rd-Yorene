@@ -18,68 +18,68 @@
 <body>
 
   <div class="container">
+    <h1>Todo List</h1>
 
+    <blockquote class="blockquote">
+      <!-- mb 好像是間距？ -->
+      <p class="mb-0">When the migrating birds define the sky, you look back at the sunset. What appears in
+        disappearance is the rose
+        of time.</p>
+      <footer class="blockquote-footer">Poet, Bei Dao</footer>
+    </blockquote>
+    <!-- <p>It always seems impossible until its done. - Former President of South Africa, Nelson Mandela</p> -->
+    <!-- <p>I do not know where to go, but I have been on the road. - Movie, Spirited Away</p> -->
+
+    <!-- mb 好像是間距？ -->
     <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
-        aria-describedby="button-addon2">
-      <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-      </div>
+      <input type="text" class="form-control" placeholder="Add A New Mission..." aria-label="Add A New Mission...">
+      <button class="btn btn-primary"> + </button>
     </div>
 
+    <!-- list-group-flush -->
     <ul class="list-group">
-      <!-- 對於更長的內容，你可以增加一個 .text-truncate，可以截掉多餘內容改用 ... -->
 
-      <li class="list-group-item text-truncate">111 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-        distinctio saepe voluptatem obcaecati vitae ut? Inventore rerum blanditiis totam placeat exercitationem incidunt
-        nemo nulla? Porro distinctio dolore fuga molestiae provident? 111111222222222222 Cras justo odio</li>
-      <li class="list-group-item list-group-item-action done">2222Dapibus ac facilisis in</li>
-      <li class="list-group-item list-group-item-action">Morbi leo risus</li>
-      <li class="list-group-item">Porta ac consectetur ac</li>
-      <li class="list-group-item">Vestibulum at eros
-        <span class="badge badge-primary badge-pill">14</span>
+      <li class="list-group-item">
+        <input class="check" type="checkbox">
+        <!-- <button class="btn btn-outline-primary">☑☐■○</button> -->
+        <span>Daydream</span>
+        <button class="btn btn-outline-primary">X</button>
       </li>
-      <li class="list-group-item list-group-item-action">Porta ac consectetur ac</li>
-      <li class="list-group-item done">Vestibulum at eros</li>
+
+      <li class="list-group-item">
+        <input class="check" type="checkbox">
+        <span>Complete The Keynote</span>
+        <button class="btn btn-outline-primary">X</button>
+      </li>
+
+      <li class="list-group-item">
+        <input class="check" type="checkbox">
+        <span>Prepare Presentation</span>
+        <button class="btn btn-outline-primary">X</button>
+      </li>
+
+      <li class="list-group-item">
+        <input class="check" type="checkbox">
+        <span>Dinner</span>
+        <button class="btn btn-outline-primary">X</button>
+      </li>
+
     </ul>
 
 
 
-    <div class="list-group">
-      <button type="button" class="list-group-item list-group-item-action done">
-        1 Cras justo odio
-      </button>
-      <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in</button>
-      <button type="button" class="list-group-item list-group-item-action">Morbi leo risus</button>
-      <button type="button" class="list-group-item list-group-item-action">Porta ac consectetur ac
-        <span class="badge badge-primary badge-pill">14</span>
-      </button>
-      <button type="button" class="list-group-item list-group-item-action">Vestibulum at eros</button>
-      <button type="button" class="list-group-item list-group-item-action list-group-item-action done">Porta ac
-        consectetur
-        ac</button>
-      <button type="button" class="list-group-item list-group-item-action list-group-item-success">Vestibulum at
-        eros</button>
 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
 
-
-    </div>
-
-
-
-  </div>
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
-  <script src="./index.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
