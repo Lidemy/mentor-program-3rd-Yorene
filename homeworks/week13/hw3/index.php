@@ -17,22 +17,9 @@ require_once('conn.php');
 
 <body>
 
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="./index.php">Home</a></li>
-      <li class="breadcrumb-item"><a href="./admin.php">Review Comments</a></li>
-
-      <?php
-      if (!isset($_SESSION['valid_user'])) {
-        echo "<li class='breadcrumb-item'><a href='./add_user.php'>Sign Up</a></li>";
-        echo "<li class='breadcrumb-item'><a href='./login.php'>Login</a></li>";
-      } else {
-        echo "<li class='breadcrumb-item'><a href='./logout.php'>Logout</a></li>";
-      }
-      ?>
-
-    </ol>
-  </nav>
+  <?php
+  require_once('header_nav.php');
+  ?>
 
   <div class="jumbotron jumbotron-fluid">
     <div class="container text-center">
@@ -89,13 +76,15 @@ require_once('conn.php');
         while ($row = $result->fetch_assoc()) {
           $commentId = $row['id'];
           $originPoster = $row['user_id'];
+          $nickname = $row['nickname'];
+          $textNickname = htmlspecialchars($nickname, ENT_QUOTES, 'utf-8');
           $content = $row['content'];
           $textContent = htmlspecialchars($content, ENT_QUOTES, 'utf-8');
 
           // Bootstrap
           echo "<div class='card mb-3'>";
           echo "  <div class='card-header'>";
-          echo "    <span>" . $row['nickname'] . "</span>";
+          echo "    <span>" . $textNickname . "</span>";
           echo "    <span class='text-right text-muted'> 🕛 " . $row['created_at'] . "</span>";
           echo "  </div>";
           echo "  <div class='card-body'>";
@@ -119,6 +108,10 @@ require_once('conn.php');
           $childResultCheck = $childResult->num_rows;
           if ($childResult && $childResultCheck > 0) {
             while ($childRow = $childResult->fetch_assoc()) {
+              $nickname = $childRow['nickname'];
+              $textNickname = htmlspecialchars($nickname, ENT_QUOTES, 'utf-8');
+              $content = $childRow['content'];
+              $textContent = htmlspecialchars($content, ENT_QUOTES, 'utf-8');
 
               if ($childRow['user_id'] === $originPoster) {
                 echo "<div class='card m-3 text-white bg-dark comment-children'>";
@@ -128,11 +121,11 @@ require_once('conn.php');
 
               // echo "<div class='card mb-3'>";
               echo "  <div class='card-header'>";
-              echo "    <span>" . $childRow['nickname'] . "</span>";
+              echo "    <span>" . $textNickname . "</span>";
               echo "    <span class='text-right text-muted'> 🕛 " . $childRow['created_at'] . "</span>";
               echo "  </div>";
               echo "  <div class='card-body'>";
-              echo "    <p class='card-text'>" . $childRow['content'] . "</p>";
+              echo "    <p class='card-text'>" . $textContent . "</p>";
               echo "  </div> ";
               echo " </div> ";
             }

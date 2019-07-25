@@ -16,12 +16,9 @@ require_once('conn.php');
 
 <body>
 
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="./index.php">Home</a></li>
-      <li class='breadcrumb-item'><a href='./logout.php'>Logout</a></li>
-    </ol>
-  </nav>
+  <?php
+  require_once('header_nav.php');
+  ?>
 
   <div class="jumbotron jumbotron-fluid">
     <div class="container text-center">

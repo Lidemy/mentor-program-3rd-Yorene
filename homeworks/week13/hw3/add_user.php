@@ -11,12 +11,9 @@
 
 <body>
 
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="./index.php">Home</a></li>
-      <li class="breadcrumb-item"><a href="./login.php">Login</a></li>
-    </ol>
-  </nav>
+  <?php
+  require_once('header_nav.php');
+  ?>
 
   <div class="jumbotron jumbotron-fluid">
     <div class="container text-center">
@@ -32,9 +29,10 @@
       <div class="p-2">Username: <input type="text" name='username'></div>
       <div class="p-2">Password: <input type="password" name='password'></div>
       <div class="p-2">Nickname: <input type="text" name='nickname'></div>
-      <div class="p-2"><input type="submit"  class="btn btn-primary"></div>
+      <div class="p-2"><input type="submit" class="btn btn-primary"></div>
     </form>
 
   </div>
 </body>
+
 </html>

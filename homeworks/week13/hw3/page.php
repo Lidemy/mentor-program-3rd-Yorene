@@ -14,21 +14,10 @@ require_once('conn.php');
 </head>
 
 <body>
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="./index.php">Home</a></li>
-      <li class="breadcrumb-item"><a href="./admin.php">Review Comments</a></li>
-      <?php
-      if (!isset($_SESSION['valid_user'])) {
-        echo "<li class='breadcrumb-item'><a href='./add_user.php'>Sign Up</a></li>";
-        echo "<li class='breadcrumb-item'><a href='./login.php'>Login</a></li>";
-      } else {
-        echo "<li class='breadcrumb-item'><a href='./logout.php'>Logout</a></li>";
-      }
-      ?>
-    </ol>
-  </nav>
 
+  <?php
+  require_once('header_nav.php');
+  ?>
 
   <div class="jumbotron jumbotron-fluid">
     <div class="container text-center">
@@ -39,38 +28,37 @@ require_once('conn.php');
 
   <div class='container'>
 
-    <div class='comments'>
+    <?php
+    $page = $_GET['id'];
+    $offsetNumber = ($page - 1) * 20;
 
-      <?php
-      $page = $_GET['id'];
-      $offsetNumber = ($page - 1) * 20;
-
-      $sql = "SELECT C.content, C.created_at, U.nickname FROM yorene_comments as C 
+    $sql = "SELECT C.content, C.created_at, U.nickname FROM yorene_comments as C 
       LEFT JOIN yorene_users as U ON C.user_id = U.id 
       ORDER BY C.created_at DESC 
       LIMIT 20 OFFSET $offsetNumber ";
 
-      $result = $conn->query($sql);
-      $resultCheck = $result->num_rows;
-      if ($result && $resultCheck > 0) {
-        while ($row = $result->fetch_assoc()) {
-          $content = $row['content'];
-          $textContent = htmlspecialchars($content, ENT_QUOTES, 'utf-8');
+    $result = $conn->query($sql);
+    $resultCheck = $result->num_rows;
+    if ($result && $resultCheck > 0) {
+      while ($row = $result->fetch_assoc()) {
+        $content = $row['content'];
+        $textContent = htmlspecialchars($content, ENT_QUOTES, 'utf-8');
+        $nickname = $row['nickname'];
+        $textNickname = htmlspecialchars($nickname, ENT_QUOTES, 'utf-8');
 
-          echo "<div class='card mb-3'>";
-          echo "  <div class='card-header'>";
-          echo "    <span>" . $row['nickname'] . "</span>";
-          echo "    <span class='text-right text-muted'> 🕛 " . $row['created_at'] . "</span>";
-          echo "  </div>";
-          echo "  <div class='card-body'>";
-          echo "    <p class='card-text'>" . $textContent . "</p>";
-          echo "  </div> ";
-          echo "</div> ";
-        }
+
+        echo "<div class='card mb-3'>";
+        echo "  <div class='card-header'>";
+        echo "    <span>" . $textNickname . "</span>";
+        echo "    <span class='text-right text-muted'> 🕛 " . $row['created_at'] . "</span>";
+        echo "  </div>";
+        echo "  <div class='card-body'>";
+        echo "    <p class='card-text'>" . $textContent . "</p>";
+        echo "  </div> ";
+        echo "</div> ";
       }
-      ?>
-
-    </div>
+    }
+    ?>
 
     <?php
     require_once('footer.php');
