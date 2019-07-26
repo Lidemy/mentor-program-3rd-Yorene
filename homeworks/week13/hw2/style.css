@@ -1,0 +1,23 @@
+* {
+  /* border: 1px solid wheat; */
+}
+
+.container {
+  margin-top: 100px;
+}
+
+span {
+  padding-right: 200px;
+}
+
+.btn-outline-primary{
+  border: 0px;
+}
+
+.done {
+  background-color: black;
+  color: darkgray;
+  /* same as HTML tag <del> or <s> */
+  text-decoration:line-through;
+  order: 3;
+}
