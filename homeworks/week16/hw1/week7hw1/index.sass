@@ -1,0 +1,26 @@
+// $r-color: random(225)
+// $g-color: random(225)
+// $b-color: random(225)
+
+// .random-color
+//   background-color: rgb($r-color, $g-color, $b-color)
+
+@mixin center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.play 
+  @include center
+  text-align: centerl
+
+  > .title
+    font-size: 50px
+  > .change-color
+    width: 100px
+    height: 30px
+    border-radius: 5px
+    display: none
+  > .start-again
+    display: inline-block
