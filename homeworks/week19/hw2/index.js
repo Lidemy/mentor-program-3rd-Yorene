@@ -8,47 +8,21 @@ const todoHtml = `
   </li>
 `;
 
-// function showTodo(todoJson) {
-//   $('.list-group').empty();
-
-//   // render
-//   for (const eachTodo in todoJson) {
-//     if (Object.prototype.hasOwnProperty.call(todoJson, eachTodo)) {
-//       let done = '';
-//       let checked = '';
-
-//       // 資料的狀態：是否已完成
-//       if (todoJson[eachTodo].done === 1) {
-//         // console.log(todoJson[eachTodo]);
-//         done = 'done';
-//         checked = 'checked';
-//       }
-
-//       const todo = todoHtml.replace('{{content}}', todoJson[eachTodo].content)
-//         .replace('{{id}}', todoJson[eachTodo].id)
-//         .replace('{{done}}', done)
-//         .replace('{{checked}}', checked);
-
-//       $('.list-group').append(todo);
-//     }
-//   }
-// }
-
-
 function showTodo(todoJson) {
   $('.list-group').empty();
 
   // render
   const totalIds = Object.keys(todoJson);
   const totalValues = Object.values(todoJson);
-  console.log(totalValues);
+  // console.log(totalValues);
 
   for (let i = 0; i < totalIds.length; i += 1) {
     let done = '';
     let checked = '';
+    // console.log(totalValues[i]);
 
     // 資料的狀態：是否已完成
-    if (totalValues[i].done === 1) {
+    if (totalValues[i].done === '1') {
       // console.log(todoJson[eachTodo]);
       done = 'done';
       checked = 'checked';
@@ -69,7 +43,7 @@ $.ajax({
   url: '../hw1/api.php',
 }).done((todoJson) => {
   // const todoJson = JSON.parse(res);
-  console.log(todoJson);
+  // console.log(todoJson);
 
   // render
   // for (eachTodo in todoJson) {
@@ -77,7 +51,6 @@ $.ajax({
   //     .replace('{{id}}', todoJson[eachTodo].id);
   //   $('.list-group').append(todo);
   // }
-
   showTodo(todoJson);
 })
   .fail((error) => {
