@@ -1,0 +1,20 @@
+* {
+  /* border: 1px solid wheat; */
+}
+
+span {
+  padding-left: 12px;
+}
+
+.btn-outline-primary{
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.done {
+  background-color: rgb(20, 20, 20);
+  color: rgb(68, 68, 68);
+  /* same as HTML tag <del> or <s> */
+  text-decoration:line-through;
+  order: 3;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Bootswatch -->
+  <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+
+  <link rel="stylesheet" href="./style.css">
+  <title>ToDoLists</title>
+</head>
+
+<body>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container text-center">
+      <h1 class="display-4">Todo List</h1>
+      <blockquote class="blockquote">
+        <p class="mb-0">When the migrating birds define the sky, you look back at the sunset. What appears in
+          disappearance is the rose
+          of time.</p>
+        <footer class="blockquote-footer">Poet, Bei Dao</footer>
+      </blockquote>
+    </div>
+  </div>
+
+  <div class='container text-left'>
+
+    <!-- Add comments -->
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Add A New Mission..." aria-label="Add A New Mission...">
+      <button class="btn btn-primary js-add"> + </button>
+    </div>
+
+    <ul class="list-group">
+      <!-- <li class="list-group-item d-flex align-items-center">
+        <input class="check" type="checkbox">
+        <span class='flex-grow-1 input-group'>
+          Daydream1
+        </span>
+        <button class="btn btn-outline-primary js_update" data={{id}}>Edit</button>
+        <button class="btn btn-outline-primary js_delete" data={{id}}>X</button>
+      </li>
+
+      <li class="list-group-item d-flex align-items-center">
+        <input class="check" type="checkbox">
+        <span class='flex-grow-1 input-group'>
+          <input type="text" class="form-control" value="Daydream2">
+          <button class="btn btn-outline-primary input-group-append js-update-send">↵</button>
+        </span>
+        <button class="btn btn-outline-primary js_update" data={{id}}>Edit</button>
+        <button class="btn btn-outline-primary js_delete" data={{id}}>X</button>
+      </li> -->
+
+    </ul>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src='./index.js'></script>
+</body>
+
+</html>
